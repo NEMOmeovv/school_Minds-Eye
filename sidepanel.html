@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>GPT 요약 도우미</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <!-- 축소된 헤더 영역 -->
+  <div id="minimized-header" class="minimized-header" style="display: none;">
+    <span>GPT 요약 확장 도우미</span>
+    <button id="expand-button">열기</button>
+  </div>
+
+  <!-- 전체 컨텐츠 영역 -->
+  <div id="main-container" class="container">
+    <h2>드래그 한 글</h2>
+    <textarea id="input-text" placeholder="드래그한 텍스트가 여기에 들어옵니다. 직접 수정 가능"></textarea>
+
+    <div class="button-row">
+      <button id="run-button">▶ 실행하기</button>
+      <button id="reset-button">🧹 초기화</button>
+    </div>
+
+    <h2>GPT 결과</h2>
+    <div id="gpt-result">
+      <div>
+        <h3>📌 내용 요약</h3>
+        <div id="summary-output" class="output-box"></div>
+      </div>
+      <div>
+        <h3>🧠 작성자의 의도</h3>
+        <div id="intent-output" class="output-box"></div>
+      </div>
+    </div>
+
+    <h2>🔗 관련 기사</h2>
+    <div id="related-links" class="link-box"></div>
+
+    <h2>🔐 OpenAI API Key</h2>
+    <input type="password" id="api-key" placeholder="sk-..." style="width: 100%;" />
+    <div class="button-row">
+      <button id="save-key-button">💾 저장</button>
+      <button id="clear-key-button">❌ 삭제</button>
+    </div>
+  </div>
+
+  <script src="service_worker.js"></script>
+</body>
+</html>

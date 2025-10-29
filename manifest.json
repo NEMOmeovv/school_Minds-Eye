@@ -1,0 +1,17 @@
+{
+  "manifest_version": 3,
+  "name": "GPT 요약 확장 도우미",
+  "version": "1.0",
+  "description": "드래그한 텍스트를 요약해주는 크롬 확장 프로그램",
+  "permissions": ["contextMenus", "storage", "sidePanel", "tabs"],
+  "host_permissions": ["<all_urls>"],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "action": {
+    "default_title": "GPT 요약 확장 도우미"
+  },
+  "side_panel": {
+    "default_path": "sidepanel.html"
+  }
+}
